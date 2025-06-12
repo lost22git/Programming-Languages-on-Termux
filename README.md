@@ -336,6 +336,12 @@ pkg i sourcekit-lsp
 ```
 
 
+## ![V](https://skillicons.dev/icons?i=v) V
+
+### Compiler / Formatter
+
+https://github.com/vlang/v/blob/master/README.md#termuxandroid
+
 ## ![Zig](https://skillicons.dev/icons?i=zig) Zig (requires Linux Kernel at least v3.16)
 
 ### Compiler / Formatter
