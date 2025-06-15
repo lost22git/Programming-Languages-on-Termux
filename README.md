@@ -323,10 +323,17 @@ pkg i rust-analyzer
 
 ## ![Swift](https://skillicons.dev/icons?i=swift) Swift
 
-### Compiler / Formatter
+### Compiler
 
 ```sh
 pkg i swift
+```
+
+### Formatter
+
+```sh
+git clone https://github.com/swiftlang/swift-format.git && cd swift-format
+swift build -c release
 ```
 
 ### LSP
