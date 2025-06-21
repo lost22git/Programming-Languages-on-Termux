@@ -157,6 +157,8 @@ pkg i gleam
 pkg i golang
 
 export PATH=~/go/bin:$PATH
+
+go install golang.org/x/tools/cmd/goimports@latest
 ```
 
 ### LSP
