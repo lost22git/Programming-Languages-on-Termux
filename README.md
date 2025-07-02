@@ -205,6 +205,17 @@ pkg i openjdk-21
 pkg i nodejs
 ```
 
+## ![Kotlin](https://skillicons.dev/icons?i=kotlin) Kotlin
+
+### Compiler
+
+```sh
+pkg i kotlin libjansi
+
+alias kt='kotlin -Dlibrary.jansi.path=/data/data/com.termux/files/usr/lib/jansi'
+alias ktc='kotlinc -Dlibrary.jansi.path=/data/data/com.termux/files/usr/lib/jansi'
+```
+
 ## ![LFE](https://skillicons.dev/icons?i=lfe) LFE
 
 ### Compiler
