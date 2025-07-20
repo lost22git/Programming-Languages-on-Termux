@@ -1,4 +1,4 @@
-# Programming Languages on Termux 
+# Programming Languages on Termux
 
 ## ![Arturo](https://skillicons.dev/icons?i=arturo) Arturo
 
@@ -40,7 +40,7 @@ mv cljfmt ~/.local/bin/cljfmt-glibc
 # create executable shell
 cat <<EOF > ~/.local/bin/cljfmt
 #!/data/data/com.termux/files/usr/bin/env bash
-grun -s "cljfmt-glibc $@"
+grun -s "cljfmt-glibc \$@"
 EOF
 chmod +x ~/.local/bin/cljfmt
 ```
@@ -61,7 +61,7 @@ mv clojure-lsp ~/.local/bin/clojure-lsp-glibc
 # create executable shell
 cat <<EOF > ~/.local/bin/clojure-lsp
 #!/data/data/com.termux/files/usr/bin/env bash
-grun -s "clojure-lsp-glibc -Djava.io.tmpdir=$TMPDIR $@"
+grun -s "clojure-lsp-glibc -Djava.io.tmpdir=\$TMPDIR \$@"
 EOF
 chmod +x ~/.local/bin/clojure-lsp
 ```
@@ -128,13 +128,13 @@ https://github.com/flix/flix/releases/download/v${version}/flix.jar
 
 ```sh
 # move to ~/.local/lib/flix/
-mkdir ~/.local/lib/flix 
+mkdir ~/.local/lib/flix
 mv flix.jar ~/.local/lib/flix/
 
 # create executable shell
 cat <<EOF > ~/.local/bin/flix
 #!/usr/bin/env bash
-java -jar ~/.local/lib/flix/flix.jar "$@"
+java -jar ~/.local/lib/flix/flix.jar "\$@"
 EOF
 chmod +x ~/.local/bin/flix
 ```
@@ -173,7 +173,7 @@ pkg i gopls
 
 https://github.com/janet-lang/janet?tab=readme-ov-file#macos-and-unix-like
 
-OR 
+OR
 
 ```sh
 pkg i janet
