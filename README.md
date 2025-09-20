@@ -211,9 +211,25 @@ pkg i nodejs
 
 ```sh
 pkg i kotlin libjansi
+```
 
-alias kt='kotlin -Dlibrary.jansi.path=/data/data/com.termux/files/usr/lib/jansi'
-alias ktc='kotlinc -Dlibrary.jansi.path=/data/data/com.termux/files/usr/lib/jansi'
+create some shims:
+
+```sh
+# create shim of kotlin
+cat <<EOF > ~/.local/bin/kotlin
+#!/usr/bin/env bash
+exec "\$PREFIX/bin/kotlin" -Dlibrary.jansi.path="\$PREFIX/lib/jansi" "\$@"
+EOF
+chmod +x ~/.local/bin/kotlin
+
+
+# create shim of kotlinc
+cat <<EOF > ~/.local/bin/kotlinc
+#!/usr/bin/env bash
+exec "\$PREFIX/bin/kotlinc" -Dlibrary.jansi.path="\$PREFIX/lib/jansi" "\$@"
+EOF
+chmod +x ~/.local/bin/kotlinc
 ```
 
 ## ![LFE](https://skillicons.dev/icons?i=lfe) LFE
