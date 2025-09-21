@@ -130,18 +130,18 @@ https://git.sr.ht/~xerool/fennel-ls/tree/HEAD/docs/installation.md
 
 ### Compiler / LSP
 
-https://github.com/flix/flix/releases/download/v${version}/flix.jar
-
 ```sh
-# move to ~/.local/lib/flix/
+# download flix.jar
 mkdir ~/.local/lib/flix
-mv flix.jar ~/.local/lib/flix/
+wget -O ~/.local/lib/flix/flix.jar https://github.com/flix/flix/releases/latest/download/flix.jar
 
-# create executable shell
+# create shim
 cat <<EOF > ~/.local/bin/flix
 #!/usr/bin/env bash
 java -jar ~/.local/lib/flix/flix.jar "\$@"
 EOF
+
+# make it executable
 chmod +x ~/.local/bin/flix
 ```
 
