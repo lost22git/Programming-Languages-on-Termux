@@ -234,6 +234,12 @@ chmod +x ~/.local/bin/google-java-format-glibc
 pkg i nodejs
 ```
 
+### Formatter
+
+```sh
+pkg i deno
+```
+
 ## ![Kotlin](https://skillicons.dev/icons?i=kotlin) Kotlin
 
 ### Compiler
@@ -420,4 +426,3 @@ pkg i zig
 ```sh
 pkg i zls
 ```
-
