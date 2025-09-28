@@ -28,7 +28,7 @@ https://clojure.org/guides/install_clojure#_linux_instructions
 
 - cljfmt
 
-https://github.com/weavejester/cljfmt/releases/download/${version}/cljfmt-${version}-linux-aarch64.tar.gz
+https://github.com/weavejester/cljfmt/releases
 
 ```sh
 # glibc-runner patch
@@ -55,6 +55,10 @@ chmod +x ~/.local/bin/cljfmt-glibc
 https://github.com/clojure-lsp/clojure-lsp/releases/download/${version}/clojure-lsp-native-linux-aarch64.zip
 
 ```sh
+# download clojure-lsp
+curl -fsSL -o clojure-lsp.zip https://github.com/clojure-lsp/clojure-lsp/releases/latest/download/clojure-lsp-native-linux-aarch64.zip
+unzip clojure-lsp.zip
+
 # glibc-runner patch
 grun -c clojure-lsp
 
