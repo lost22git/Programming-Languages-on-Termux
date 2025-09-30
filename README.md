@@ -343,12 +343,20 @@ pkg i perl
 pkg i python3
 ```
 
-### Formatter / LSP
+### Formatter
 
 - ruff
 
-```
+```sh
 pkg i ruff
+```
+
+### LSP
+
+- ty
+
+```sh
+uv pip install ty --system
 ```
 
 ## ![Racket](https://skillicons.dev/icons?i=racket) Racket
