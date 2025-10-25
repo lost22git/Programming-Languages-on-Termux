@@ -277,6 +277,14 @@ chmod +x ~/.local/bin/kotlinc
 
 https://cnbbooks.github.io/lfe-tutorial/introduction/install.html
 
+## ![Lisp](https://skillicons.dev/icons?i=lisp) Lisp
+
+### Compiler
+
+```sh
+pkg i sbcl
+```
+
 ## ![Lua](https://skillicons.dev/icons?i=lua) Lua
 
 ### Compiler
@@ -373,6 +381,31 @@ pkg i racket
 raco pkg install fmt
 ```
 
+## ![Racket](https://skillicons.dev/icons?i=racket) Racket
+
+### Compiler
+
+```sh
+pkg i racket
+```
+
+### Formatter
+
+```sh
+raco pkg install fmt
+```
+
+> NOTE: it took 8h0m40s on my mobile
+
+### LSP
+
+```sh
+raco pkg install racket-langserver
+```
+
+> NOTE: it requires libgtk and x11-server. 
+> i have no time to continue, but you can try it.
+
 
 ## ![Raku](https://skillicons.dev/icons?i=raku) Raku
 
@@ -381,7 +414,6 @@ raco pkg install fmt
 ```sh
 pkg i rakudo
 ```
-
 
 ## ![Rust](https://skillicons.dev/icons?i=rust) Rust
 
