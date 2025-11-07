@@ -8,14 +8,11 @@
 pkg i arturo
 ```
 
-
-## ![C/C++](https://skillicons.dev/icons?i=c,cpp) C/C++
+## ![ChezScheme](https://skillicons.dev/icons?i=scheme) ChezScheme
 
 ### Compiler
 
-```sh
-pkg i clang
-```
+https://github.com/HardGraphite/chezscheme-termux-build
 
 
 ## ![Clojure](https://skillicons.dev/icons?i=clojure) Clojure
@@ -365,20 +362,6 @@ pkg i ruff
 
 ```sh
 uv pip install ty --system
-```
-
-## ![Racket](https://skillicons.dev/icons?i=racket) Racket
-
-### Compiler
-
-```sh
-pkg i racket
-```
-
-### Formatter
-
-```sh
-raco pkg install fmt
 ```
 
 ## ![Racket](https://skillicons.dev/icons?i=racket) Racket
