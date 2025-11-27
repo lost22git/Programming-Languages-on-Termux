@@ -357,6 +357,62 @@ nimble install nph
 nimble install nimlangserver
 ```
 
+## ![OCaml](https://skillicons.dev/icons?i=ocaml) OCaml
+
+### Compiler
+
+```sh
+git clone --branch 5.4 --depth 1 https://github.com/ocaml/ocaml.git && cd ocaml
+./configure --prefix=$PREFIX --disable-warn-error --without-afl LDFLAGS="-landroid-shmem"
+make && make install
+```
+
+### PackageManager
+
+- Opam
+
+```sh
+git clone --depth 1 https://github.com/ocaml/opam.git && cd opam
+./configure --prefix=$PREFIX --with-vendored-deps
+ln -s "$(which make)" "$PREFIX/bin/gmake"
+make && make install
+
+# For rooted device
+#
+# pkg i root-repo && pkg i bubblewrap
+# opam init
+
+# For unrooted device
+#
+opam init --disable-sandboxing
+
+opam switch create default ocaml-system
+```
+
+### BuildTool
+
+- Dune
+
+```sh
+git clone --depth 1 https://github.com/ocaml/dune && cd dune
+ocaml bootstrap.ml
+./dune.exe build -p dune --profile dune-bootstrap
+export DESTDIR=""
+./dune.exe install --destdir="/data/data/com.termux/files" --prefix=usr dune
+```
+
+### Formatter
+
+```sh
+opam install ocamlformat
+```
+
+### LSP
+
+```sh
+opam install ocaml-lsp-server
+```
+
 ## ![Perl](https://skillicons.dev/icons?i=perl) Perl
 
 ### Compiler
