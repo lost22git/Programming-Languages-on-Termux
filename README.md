@@ -8,6 +8,31 @@
 pkg i arturo
 ```
 
+## ![Babashka](https://skillicons.dev/icons?i=babashka) Babashka
+
+### Compiler
+
+```sh
+wget -O bb.tar.gz https://github.com/babashka/babashka/releases/download/v1.12.212/babashka-1.12.212-linux-aarch64-static.tar.gz
+tar xf bb.tar.gz
+
+# glibc-runner patch
+grun -c bb
+
+# move to ~/.local/glibc/bin
+mv bb ~/.local/glibc/bin/
+chmod +x ~/.local/glibc/bin/bb
+
+# create shim
+cat <<EOF > ~/.local/bin/bb
+#!$PREFIX/bin/env bash
+grun -s "~/.local/glibc/bin/bb \$@"
+EOF
+
+# make them executable
+chmod +x ~/.local/bin/bb
+```
+
 ## ![ChezScheme](https://skillicons.dev/icons?i=scheme) ChezScheme
 
 ### Compiler
