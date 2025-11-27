@@ -31,18 +31,18 @@ https://github.com/weavejester/cljfmt/releases
 # glibc-runner patch
 grun -c cljfmt
 
-# move to ~/.local/bin
-mv cljfmt ~/.local/bin/cljfmt-glibc
+# move to ~/.local/glibc/bin
+mv cljfmt ~/.local/glibc/bin/
+chmod +x ~/.local/glibc/bin/cljfmt
 
 # create shim
 cat <<EOF > ~/.local/bin/cljfmt
 #!$PREFIX/bin/env bash
-grun -s "cljfmt-glibc \$@"
+grun -s "~/.local/glibc/bin/cljfmt \$@"
 EOF
 
 # make them executable
 chmod +x ~/.local/bin/cljfmt
-chmod +x ~/.local/bin/cljfmt-glibc
 ```
 
 ### LSP
@@ -59,18 +59,18 @@ unzip clojure-lsp.zip
 # glibc-runner patch
 grun -c clojure-lsp
 
-# move to ~/.local/bin
-mv clojure-lsp ~/.local/bin/clojure-lsp-glibc
+# move to ~/.local/glibc/bin
+mv clojure-lsp ~/.local/glibc/bin
+chmod +x ~/.local/glibc/bin/clojure-lsp
 
 # create shim
 cat <<EOF > ~/.local/bin/clojure-lsp
 #!$PREFIX/bin/env bash
-grun -s "clojure-lsp-glibc -Djava.io.tmpdir=\$TMPDIR \$@"
+grun -s "~/.local/glibc/bin/clojure-lsp -Djava.io.tmpdir=\$TMPDIR \$@"
 EOF
 
 # make them executable
 chmod +x ~/.local/bin/clojure-lsp
-chmod +x ~/.local/bin/clojure-lsp-glibc
 ```
 
 ## ![Crystal](https://skillicons.dev/icons?i=crystal) Crystal
@@ -208,23 +208,23 @@ pkg i openjdk-21
 
 ```sh
 # download google-java-format_linux-arm64
-wget -O google-java-format-glibc https://github.com/google/google-java-format/releases/latest/download/google-java-format_linux-arm64
+wget -O google-java-format https://github.com/google/google-java-format/releases/latest/download/google-java-format_linux-arm64
 
 # glibc-runner patch
-grun -c google-java-format-glibc
+grun -c google-java-format
 
-# move to ~/.local/bin
-mv google-java-format-glibc ~/.local/bin
+# move to ~/.local/glibc/bin
+mv google-java-format ~/.local/glibc/bin
+chmod +x ~/.local/glibc/bin/google-java-format
 
 # create shim
 cat <<EOF > ~/.local/bin/google-java-format
 #!$PREFIX/bin/env bash
-grun -s "google-java-format-glibc \$@"
+grun -s "~/.local/glibc/bin/google-java-format \$@"
 EOF
 
 # make them executable
 chmod +x ~/.local/bin/google-java-format
-chmod +x ~/.local/bin/google-java-format-glibc
 ```
 
 ## ![JavaScript / TypeScript](https://skillicons.dev/icons?i=javascript,typescript) JavaScript / TypeScript
@@ -432,7 +432,6 @@ swift build -c release
 ```sh
 pkg i sourcekit-lsp
 ```
-
 
 ## ![V](https://skillicons.dev/icons?i=v) V
 
