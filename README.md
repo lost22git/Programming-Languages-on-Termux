@@ -459,7 +459,8 @@ pkg i racket
 raco pkg install fmt
 ```
 
-> NOTE: it took 8h0m40s on my mobile
+> [!NOTE]
+> it took 8h0m40s on my mobile (network issue? IDK)
 
 ### LSP
 
@@ -467,7 +468,8 @@ raco pkg install fmt
 raco pkg install racket-langserver
 ```
 
-> NOTE: it requires libgtk and x11-server. 
+> [!NOTE]
+> it requires libgtk and x11-server. 
 > i have no time to continue, but you can try it.
 
 
