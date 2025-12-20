@@ -199,6 +199,41 @@ go install golang.org/x/tools/cmd/goimports@latest
 pkg i gopls
 ```
 
+## ![Haskell](https://skillicons.dev/icons?i=haskell) Haskell
+
+### Compiler
+
+```sh
+pkg i ghc
+```
+
+### BuildTool
+
+- cabal
+
+```sh
+pkg i cabal-install dnsutils
+```
+
+- stack
+
+TODO
+
+### Formatter
+
+```sh
+cabal update
+# todo: failed due to https://github.com/mrkkrp/megaparsec/issues/587
+cabal install ormolu
+```
+
+### LSP
+
+```sh
+# todo: failed due to https://github.com/mrkkrp/megaparsec/issues/587
+cabal install haskell-language-server
+```
+
 ## ![Janet](https://skillicons.dev/icons?i=janet) Janet
 
 ### Compiler
