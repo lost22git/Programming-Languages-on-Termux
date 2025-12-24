@@ -171,6 +171,13 @@ EOF
 chmod +x ~/.local/bin/flix
 ```
 
+## ![Forth](https://skillicons.dev/icons?i=forth) Forth
+
+### Compiler
+
+```sh
+pkg i gforth
+```
 
 ## ![Gleam](https://skillicons.dev/icons?i=gleam) Gleam
 
