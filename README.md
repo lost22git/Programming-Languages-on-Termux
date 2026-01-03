@@ -33,6 +33,14 @@ EOF
 chmod +x ~/.local/bin/bb
 ```
 
+## ![Basilisp](https://skillicons.dev/icons?i=basilisp) Basilisp
+
+### Compiler
+
+```sh
+uv pip install basilisp --system
+```
+
 ## ![ChezScheme](https://skillicons.dev/icons?i=scheme) ChezScheme
 
 ### Compiler
@@ -469,6 +477,12 @@ pkg i perl
 
 ```sh
 pkg i python3
+```
+
+### BuildTool
+
+```sh
+pkg i uv
 ```
 
 ### Formatter
