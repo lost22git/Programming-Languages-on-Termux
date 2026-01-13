@@ -114,6 +114,17 @@ chmod +x ~/.local/bin/clojure-lsp
 pkg i crystal
 ```
 
+### LSP
+
+- liger
+
+```sh
+git clone https://github.com/navid-m/liger.git && cd liger
+shards build --release
+cp ./bin/liger ~/.local/bin
+liger -v
+```
+
 ## ![Dart](https://skillicons.dev/icons?i=dart) Dart
 
 ### Compiler / Formatter / LSP
