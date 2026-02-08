@@ -54,6 +54,14 @@ https://github.com/HardGraphite/chezscheme-termux-build
 
 https://clojure.org/guides/install_clojure#_linux_instructions
 
+```sh
+pkg i rlwrap
+curl -L -O https://github.com/clojure/brew-install/releases/latest/download/linux-install.sh
+chmod +x linux-install.sh
+./linux-install.sh -p ~/.local
+rm ./linux-install.sh
+```
+
 ### Formatter
 
 - cljfmt
