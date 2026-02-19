@@ -47,7 +47,6 @@ uv pip install basilisp --system
 
 https://github.com/HardGraphite/chezscheme-termux-build
 
-
 ## ![Clojure](https://skillicons.dev/icons?i=clojure) Clojure
 
 ### Compiler
@@ -214,7 +213,6 @@ pkg i gforth
 pkg i gleam
 ```
 
-
 ## ![Go](https://skillicons.dev/icons?i=go) Go
 
 ### Compiler / Formatter
@@ -270,24 +268,15 @@ cabal install haskell-language-server
 
 ## ![Janet](https://skillicons.dev/icons?i=janet) Janet
 
-### Compiler
+### Compiler / Formatter / nRepl
 
 https://github.com/janet-lang/janet?tab=readme-ov-file#macos-and-unix-like
 
-OR
-
 ```sh
-pkg i janet
-```
-
-### Formatter
-
-- janet-format
-
-https://github.com/janet-lang/spork?tab=readme-ov-file#build
-
-```sh
-export PATH=~/../usr/lib/janet/bin:$PATH
+git clone https://github.com/janet-lang/janet.git && cd janet
+mkdir $PREFIX/lib/janet
+make && make install && make install-spork-git
+export PATH=$PREFIX/lib/janet/bin:$PATH
 ```
 
 ## ![Java](https://skillicons.dev/icons?i=java) Java (not GraalVM NativeImage)
@@ -321,7 +310,7 @@ EOF
 chmod +x ~/.local/bin/google-java-format
 ```
 
-## ![JavaScript / TypeScript](https://skillicons.dev/icons?i=javascript,typescript) JavaScript / TypeScript
+## ![JavaScript/TypeScript](https://skillicons.dev/icons?i=javascript,typescript) JavaScript/TypeScript
 
 ### Compiler
 
@@ -546,7 +535,6 @@ raco pkg install racket-langserver
 > [!NOTE]
 > it requires libgtk and x11-server. 
 > i have no time to continue, but you can try it.
-
 
 ## ![Raku](https://skillicons.dev/icons?i=raku) Raku
 
