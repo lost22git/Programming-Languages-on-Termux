@@ -324,6 +324,30 @@ pkg i nodejs
 pkg i deno
 ```
 
+## ![Julia](https://skillicons.dev/icons?i=julia) Julia
+
+### Compiler
+
+```sh
+cd ~/.local/glibc/
+wget -O julia.tar.gz https://julialang-s3.julialang.org/bin/linux/aarch64/1.12/julia-1.12.5-linux-aarch64.tar.gz
+tar xf julia.tar.gz
+# glibc-runner patch julia
+grun -c julia/bin/julia
+# create shim for julia
+cat <<EOF > ~/.local/bin/julia
+#!$PREFIX/bin/env bash
+LD_LIBRARY_PATH=~/.local/glibc/julia/lib grun -s "~/.local/glibc/julia/bin/julia \$@"
+EOF
+# make them executable
+chmod +x ~/.local/bin/julia
+
+# glibc-runner patch tools
+grun -c julia/libexec/7z
+grun -c julia/libexec/lld
+grun -c julia/libexec/dsymutil
+```
+
 ## ![Kotlin](https://skillicons.dev/icons?i=kotlin) Kotlin
 
 ### Compiler
