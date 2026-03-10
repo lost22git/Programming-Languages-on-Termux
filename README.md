@@ -26,7 +26,12 @@ chmod +x ~/.local/glibc/bin/bb
 # create shim
 cat <<EOF > ~/.local/bin/bb
 #!$PREFIX/bin/env bash
-grun -s "~/.local/glibc/bin/bb \$@"
+qs=()
+for tok in "\$@"; do
+  qs+=("\$(printf '%q' "\$tok")")
+done
+q="\${qs[*]}"
+grun -s "~/.local/glibc/bin/bb \$q"
 EOF
 
 # make them executable
@@ -78,7 +83,12 @@ chmod +x ~/.local/glibc/bin/cljfmt
 # create shim
 cat <<EOF > ~/.local/bin/cljfmt
 #!$PREFIX/bin/env bash
-grun -s "~/.local/glibc/bin/cljfmt \$@"
+qs=()
+for tok in "\$@"; do
+  qs+=("\$(printf '%q' "\$tok")")
+done
+q="\${qs[*]}"
+grun -s "~/.local/glibc/bin/cljfmt \$q"
 EOF
 
 # make them executable
@@ -106,7 +116,12 @@ chmod +x ~/.local/glibc/bin/clojure-lsp
 # create shim
 cat <<EOF > ~/.local/bin/clojure-lsp
 #!$PREFIX/bin/env bash
-grun -s "~/.local/glibc/bin/clojure-lsp -Djava.io.tmpdir=\$TMPDIR \$@"
+qs=()
+for tok in "\$@"; do
+  qs+=("\$(printf '%q' "\$tok")")
+done
+q="\${qs[*]}"
+grun -s "~/.local/glibc/bin/clojure-lsp -Djava.io.tmpdir=\$TMPDIR \$q"
 EOF
 
 # make them executable
@@ -303,7 +318,12 @@ chmod +x ~/.local/glibc/bin/google-java-format
 # create shim
 cat <<EOF > ~/.local/bin/google-java-format
 #!$PREFIX/bin/env bash
-grun -s "~/.local/glibc/bin/google-java-format \$@"
+qs=()
+for tok in "\$@"; do
+  qs+=("\$(printf '%q' "\$tok")")
+done
+q="\${qs[*]}"
+grun -s "~/.local/glibc/bin/google-java-format \$q"
 EOF
 
 # make them executable
@@ -337,7 +357,13 @@ grun -c julia/bin/julia
 # create shim for julia
 cat <<EOF > ~/.local/bin/julia
 #!$PREFIX/bin/env bash
-LD_LIBRARY_PATH=~/.local/glibc/julia/lib grun -s "~/.local/glibc/julia/bin/julia \$@"
+qs=()
+for tok in "\$@"; do
+  qs+=("\$(printf '%q' "\$tok")")
+done
+q="\${qs[*]}"
+grun -s "~/.local/glibc/bin/cljfmt \$q"
+LD_LIBRARY_PATH=~/.local/glibc/julia/lib grun -s "~/.local/glibc/julia/bin/julia \$q"
 EOF
 # make them executable
 chmod +x ~/.local/bin/julia
