@@ -374,6 +374,20 @@ grun -c julia/libexec/lld
 grun -c julia/libexec/dsymutil
 ```
 
+### Formatter
+
+- Runic.jl 
+
+https://github.com/fredrikekre/Runic.jl
+
+```sh
+# Install Runic
+julia --project=@runic --startup-file=no -e 'using Pkg; Pkg.add("Runic")'
+# Install the runic shell script
+curl -fsSL -o ~/.local/bin/runic https://raw.githubusercontent.com/fredrikekre/Runic.jl/refs/heads/master/bin/runic
+chmod +x ~/.local/bin/runic
+```
+
 ## ![Kotlin](https://skillicons.dev/icons?i=kotlin) Kotlin
 
 ### Compiler
